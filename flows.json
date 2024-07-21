@@ -8,30 +8,58 @@
         "env": []
     },
     {
-        "id": "d2021f75c7f52a71",
-        "type": "inject",
+        "id": "ce06e617e68b706e",
+        "type": "http in",
+        "z": "c77d776f2f0807c6",
+        "name": "Hello World",
+        "url": "/hello",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 250,
+        "y": 120,
+        "wires": [
+            [
+                "33ac4b8051df0acd"
+            ]
+        ]
+    },
+    {
+        "id": "33ac4b8051df0acd",
+        "type": "change",
         "z": "c77d776f2f0807c6",
         "name": "",
-        "props": [
+        "rules": [
             {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Hello World From Node-RED",
+                "tot": "str"
             }
         ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 360,
-        "y": 140,
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 180,
         "wires": [
-            []
+            [
+                "bc0d54be792e2f7d"
+            ]
         ]
+    },
+    {
+        "id": "bc0d54be792e2f7d",
+        "type": "http response",
+        "z": "c77d776f2f0807c6",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 580,
+        "y": 180,
+        "wires": []
     }
 ]
