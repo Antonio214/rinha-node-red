@@ -34,7 +34,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "Hello World From Node-RED",
+                "to": "Hello World From Node-RED Updated",
                 "tot": "str"
             }
         ],
